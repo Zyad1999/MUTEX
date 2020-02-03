@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="409dp"
+    android:layout_height="729dp"
+    android:layout_marginBottom="10sp"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <ImageView
+        android:id="@+id/offical"
+        android:layout_width="match_parent"
+        android:layout_height="185sp"
+        android:layout_gravity="center"
+        app:srcCompat="?attr/colorAccent"
+        tools:srcCompat="@drawable/partners" />
+
+    <TextView
+        android:id="@+id/officalT"
+        style="@android:style/Widget.DeviceDefault.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Offical Partner"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="24sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="150sp"
+                    app:srcCompat="?attr/colorControlActivated" />
+
+                <TextView
+                    android:id="@+id/contentT"
+                    style="@android:style/Widget.DeviceDefault.TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Content Partner"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/content2"
+                    android:layout_width="match_parent"
+                    android:layout_height="150sp"
+                    app:srcCompat="?attr/colorControlActivated" />
+
+                <TextView
+                    android:id="@+id/contentT2"
+                    style="@android:style/Widget.DeviceDefault.TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Content Partner"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/content3"
+                    android:layout_width="match_parent"
+                    android:layout_height="150sp"
+                    app:srcCompat="?attr/colorControlActivated" />
+
+                <TextView
+                    android:id="@+id/contentT3"
+                    style="@android:style/Widget.DeviceDefault.TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Content Partner"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/content4"
+                    android:layout_width="match_parent"
+                    android:layout_height="150sp"
+                    app:srcCompat="?attr/colorControlActivated" />
+
+                <TextView
+                    android:id="@+id/contentT4"
+                    style="@android:style/Widget.DeviceDefault.TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Content Partner"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/stratigic"
+                    android:layout_width="match_parent"
+                    android:layout_height="150sp"
+                    app:srcCompat="?attr/colorControlActivated" />
+
+                <TextView
+                    android:id="@+id/stratigicT"
+                    style="@android:style/Widget.DeviceDefault.TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Strategic Partner"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/catring"
+                    android:layout_width="match_parent"
+                    android:layout_height="150sp"
+                    app:srcCompat="?attr/colorAccent" />
+
+                <TextView
+                    android:id="@+id/catringT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Catring Partner"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/hosting"
+                    android:layout_width="match_parent"
+                    android:layout_height="150sp"
+                    app:srcCompat="?attr/colorAccent" />
+
+                <TextView
+                    android:id="@+id/hostingT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hosting Partner"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/startup"
+                    android:layout_width="match_parent"
+                    android:layout_height="150sp"
+                    app:srcCompat="?attr/colorAccent" />
+
+                <TextView
+                    android:id="@+id/startupT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Startup Partner"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/startup2"
+                    android:layout_width="match_parent"
+                    android:layout_height="150sp"
+                    app:srcCompat="?attr/colorAccent" />
+
+                <TextView
+                    android:id="@+id/startupT2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Startup Partner"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/transporting"
+                    android:layout_width="match_parent"
+                    android:layout_height="150sp"
+                    app:srcCompat="?attr/colorAccent" />
+
+                <TextView
+                    android:id="@+id/transportingT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Transporting Partner"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
