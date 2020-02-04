@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "801765788409",
+    "firebase_url": "https://mutex-d7b73.firebaseio.com",
+    "project_id": "mutex-d7b73",
+    "storage_bucket": "mutex-d7b73.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801765788409:android:dad5011c1c555fead5f028",
+        "android_client_info": {
+          "package_name": "org.ieeezsb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "801765788409-9fsnaf29kmuceefk49f9hllp2v9cud30.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.ieeezsb",
+            "certificate_hash": "8cf68f66eee81b2fab5869591e69c1a1a74b3996"
+          }
+        },
+        {
+          "client_id": "801765788409-ghql49fmruf5fvrk21ssmkf2ds0645lt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDc6zXyLIysQ1dyw8i_OuKyW0F8YN8gMSc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "801765788409-ghql49fmruf5fvrk21ssmkf2ds0645lt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
