@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MUTEX</string>
+    <string name="feedback_form">FeedBack</string>
 </resources>
