@@ -1,12 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f7f4f7"
     tools:context=".MainActivity">
 
 
+     <ImageView
+         android:id="@+id/image"
+         android:layout_width="match_parent"
+         android:layout_height="174sp"
+         android:layout_alignParentTop="true"
+         android:paddingLeft="30sp"
+         android:paddingRight="15sp"
+         android:layout_marginTop="44sp"
+         android:layout_marginBottom="6sp"
+         android:src="@drawable/mtx" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+     <ImageView
+         android:layout_width="110sp"
+         android:layout_height="80sp"
+         android:layout_alignParentTop="true"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="-11sp"
+         android:src="@drawable/ieee" />
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="506dp"
+         android:layout_below="@id/image"
+         android:gravity="center_horizontal"
+         android:orientation="vertical"
+         android:padding="14sp">
+
+          <TextView
+              android:id="@+id/welc"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentTop="true"
+              android:textColor="#0a0a0a"
+              android:gravity="center"
+              android:text="Welcome to MUTEX"
+              android:textSize="15sp"
+              android:textStyle="bold" />
+
+          <TextView
+              android:id="@+id/about"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_alignParentBottom="true"
+              android:layout_gravity="center_horizontal"
+              android:text="MUTEX is the biggest technological annual event hosted by IEEE Zagazig SB. The event mainly focuses on introducing the latest technologies in computer science fields to the audience and setting a clear path for them to follow."
+              android:textAlignment="center"
+              android:textColor="#0a0a0a"
+              android:textSize="8sp"
+              android:textStyle="italic" />
+
+          <RelativeLayout
+              android:layout_width="wrap_content"
+              android:layout_height="188dp"
+              android:layout_below="@id/about"
+              android:layout_marginLeft="40sp"
+              android:layout_marginTop="10sp"
+              android:layout_marginRight="40sp"
+              android:paddingTop="1sp"
+              android:paddingBottom="8sp">
+
+               <ImageButton
+                   android:layout_width="41sp"
+                   android:layout_height="45sp"
+                   android:layout_alignParentRight="true"
+                   android:layout_alignParentBottom="true"
+                   android:layout_marginRight="1sp"
+                   android:layout_marginBottom="17sp"
+                   android:adjustViewBounds="true"
+                   android:background="@drawable/roundedbutton"
+                   android:paddingTop="15sp"
+                   android:scaleType="fitCenter"
+                   android:src="@drawable/agenddd" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:layout_alignParentBottom="true"
+                   android:paddingRight="4sp"
+                   android:text="Agenda"
+                   android:textColor="#0a0a0a"
+                   android:textSize="9sp"
+                   android:textStyle="bold" />
+
+               <ImageButton
+                   android:layout_width="55sp"
+                   android:layout_height="50sp"
+                   android:layout_alignParentLeft="true"
+                   android:layout_alignParentBottom="true"
+                   android:layout_marginBottom="17sp"
+                   android:adjustViewBounds="true"
+                   android:background="@drawable/roundedbutton"
+                   android:scaleType="fitCenter"
+                   android:src="@drawable/fd" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentLeft="true"
+                   android:layout_alignParentBottom="true"
+                   android:paddingLeft="4sp"
+                   android:text="Feedback"
+                   android:textColor="#0a0a0a"
+                   android:textSize="9sp"
+                   android:textStyle="bold" />
+
+               <ImageButton
+                   android:layout_width="41sp"
+                   android:layout_height="45sp"
+                   android:layout_alignParentTop="true"
+                   android:layout_alignParentRight="true"
+                   android:layout_marginBottom="20sp"
+                   android:adjustViewBounds="true"
+                   android:background="@drawable/roundedbutton"
+                   android:scaleType="fitCenter"
+                   android:src="@drawable/lo" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:layout_marginTop="50sp"
+                   android:paddingRight="4sp"
+                   android:text="Location"
+                   android:textColor="#0a0a0a"
+                   android:textSize="9sp"
+                   android:textStyle="bold" />
+
+               <ImageButton
+                   android:layout_width="41sp"
+                   android:layout_height="45sp"
+                   android:layout_alignParentLeft="true"
+                   android:layout_alignParentTop="true"
+                   android:layout_marginBottom="20sp"
+                   android:adjustViewBounds="true"
+                   android:background="@drawable/roundedbutton"
+                   android:scaleType="fitCenter"
+                   android:src="@drawable/sp" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentStart="true"
+                   android:layout_alignParentLeft="true"
+                   android:layout_marginTop="47dp"
+                   android:paddingLeft="4sp"
+                   android:text="Sponsors"
+                   android:textColor="#0a0a0a"
+                   android:textSize="9sp"
+                   android:textStyle="bold" />
+
+               <ImageButton
+                   android:id="@+id/ff"
+                   android:layout_width="40sp"
+                   android:layout_height="44sp"
+                   android:layout_centerInParent="true"
+                   android:layout_marginBottom="5sp"
+                   android:adjustViewBounds="true"
+                   android:background="@drawable/roundedbutton"
+                   android:scaleType="fitCenter"
+                   android:src="@drawable/user" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/ff"
+                   android:layout_centerInParent="true"
+                   android:text="Speakers"
+                   android:textColor="#0a0a0a"
+                   android:textSize="9sp"
+                   android:textStyle="bold" />
+          </RelativeLayout>
+
+     </LinearLayout>
+</RelativeLayout>
