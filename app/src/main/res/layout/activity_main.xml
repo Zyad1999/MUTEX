@@ -9,22 +9,4 @@
 
 
 
-     <life.sabujak.roundedbutton.RoundedButton
-        android:id="@+id/btnFeedBack"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="24dp"
-        android:gravity="center"
-        android:padding="24dp"
-        android:textSize="20dp"
-        android:text="Test FeedBack"
-        android:textColor="#ffffff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-         app:buttonGradientStartColor="@color/colorPrimary"
-         app:buttonGradientEndColor="@color/colorAccent"
-        app:buttonCornerRadius="20dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
