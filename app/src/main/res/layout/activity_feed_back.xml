@@ -12,153 +12,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/speakersLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="What is your impression about the speakers?"
-                android:layout_gravity="center"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:fontFamily="@font/roboto_bold"
-                android:layout_marginBottom="8dp"/>
-
-
-            <com.hsalf.smilerating.SmileRating
-                android:id="@+id/ratingViewSpeakers"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                app:angryColor="#f29a68"
-                app:drawingColor="#353431"
-                app:normalColor="@color/colorAccent"
-                app:isIndicator="false"
-                app:placeHolderBackgroundColor="#e6e8ed"
-                app:placeHolderSmileColor="#ffffff"
-                app:textNonSelectionColor="#AEB3B5"
-                app:textSelectionColor="#000000" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/volunteersLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="What is your impression about the volunteers?"
-                android:layout_gravity="center"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:fontFamily="@font/roboto_bold"
-                android:layout_marginBottom="8dp"/>
-
-
-            <com.hsalf.smilerating.SmileRating
-                android:id="@+id/ratingViewVolunteers"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                app:angryColor="#f29a68"
-                app:drawingColor="#353431"
-                app:normalColor="@color/colorAccent"
-                app:isIndicator="false"
-                app:placeHolderBackgroundColor="#e6e8ed"
-                app:placeHolderSmileColor="#ffffff"
-                app:textNonSelectionColor="#AEB3B5"
-                app:textSelectionColor="#000000" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/PostersLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="What is your impression about the Posters/Signs?"
-                android:layout_gravity="center"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:fontFamily="@font/roboto_bold"
-                android:layout_marginBottom="8dp"/>
-
-
-            <com.hsalf.smilerating.SmileRating
-                android:id="@+id/ratingViewPosters"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                app:angryColor="#f29a68"
-                app:drawingColor="#353431"
-                app:normalColor="@color/colorAccent"
-                app:isIndicator="false"
-                app:placeHolderBackgroundColor="#e6e8ed"
-                app:placeHolderSmileColor="#ffffff"
-                app:textNonSelectionColor="#AEB3B5"
-                app:textSelectionColor="#000000" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/flowLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="What is your impression about the Flow of the event?"
-                android:layout_gravity="center"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:fontFamily="@font/roboto_bold"
-                android:layout_marginBottom="8dp"/>
-
-
-            <com.hsalf.smilerating.SmileRating
-                android:id="@+id/ratingViewFlow"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                app:angryColor="#f29a68"
-                app:drawingColor="#353431"
-                app:normalColor="@color/colorAccent"
-                app:isIndicator="false"
-                app:placeHolderBackgroundColor="#e6e8ed"
-                app:placeHolderSmileColor="#ffffff"
-                app:textNonSelectionColor="#AEB3B5"
-                app:textSelectionColor="#000000" />
-
-
-        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/overallLayout"
@@ -185,9 +38,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                app:angryColor="#f29a68"
+                app:angryColor="#fe2936"
+                app:normalColor="#6753b8"
                 app:drawingColor="#353431"
-                app:normalColor="@color/colorAccent"
                 app:isIndicator="false"
                 app:placeHolderBackgroundColor="#e6e8ed"
                 app:placeHolderSmileColor="#ffffff"
