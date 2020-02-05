@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".FeedBackActivity" android:label="@string/feedback_form" android:parentActivityName=".MainActivity"></activity>
+
+        <activity android:name=".AgendaActivity" android:label="agenda" android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

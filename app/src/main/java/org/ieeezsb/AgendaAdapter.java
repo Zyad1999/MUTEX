@@ -41,15 +41,13 @@ public class AgendaAdapter extends ArrayAdapter<Data> {
             assert currentAndroidFlavor != null;
             talkTextView.setText(currentAndroidFlavor.getTalk());
 
-            TextView speakerTextView =  listItemView.findViewById(R.id.speaker);
+            TextView speakerTextView =  listItemView.findViewById(R.id.company);
             speakerTextView.setText(currentAndroidFlavor.getSpeaker());
 
             TextView timeTextView =  listItemView.findViewById(R.id.time);
             timeTextView.setText(currentAndroidFlavor.getTime());
 
             ImageView image= listItemView.findViewById(R.id.speaker_img);
-
-
             image.setImageResource(currentAndroidFlavor.getImage());
 
 

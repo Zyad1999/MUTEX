@@ -72,6 +72,7 @@
               android:paddingBottom="8sp">
 
                <ImageButton
+                   android:id="@+id/agenda_button"
                    android:layout_width="41sp"
                    android:layout_height="45sp"
                    android:layout_alignParentRight="true"
