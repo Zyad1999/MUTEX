@@ -12,8 +12,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import life.sabujak.roundedbutton.RoundedButton;
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ImageButton btnFeedBack;
@@ -39,6 +37,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 /////////////////////////////////////
+        ImageButton sponsors = findViewById(R.id.sponsorsButton);
+        sponsors.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent partnersIntent = new Intent(MainActivity.this, Partners.class);
+                startActivity(partnersIntent);
+            }
+        });
 
 
 
