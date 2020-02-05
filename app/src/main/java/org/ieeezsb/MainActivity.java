@@ -14,15 +14,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import life.sabujak.roundedbutton.RoundedButton;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private RoundedButton feedback;
+    private ImageButton btnFeedBack;
+    private TextView TvFeedback;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        btnFeedBack = findViewById(R.id.feedbackBtn);
+        TvFeedback = findViewById(R.id.feedbackTv);
 
+        btnFeedBack.setOnClickListener(this);
+        TvFeedback.setOnClickListener(this);
 // this part added by boyka for test 
         ImageButton agenda = findViewById(R.id.agenda_button);
        	agenda.setOnClickListener(new View.OnClickListener() {
@@ -66,4 +72,22 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+        private void checkInternet(){
+
+            if (!haveConnectionToInternet()){
+                Toast.makeText(MainActivity.this, "No Internet Connection", Toast.LENGTH_LONG).show();
+            } else {
+                Intent feedBackIntent = new Intent(MainActivity.this, FeedBackActivity.class);
+                startActivity(feedBackIntent);
+            }
+        }
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.feedbackBtn:
+            case R.id.feedbackTv:
+                checkInternet();
+
+        }
+    }
 }
