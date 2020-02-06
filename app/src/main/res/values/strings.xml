@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">MUTEX</string>
     <string name="feedback_form">FeedBack</string>
+    <string name="feedback">Feedback</string>
+    <string name="powered_by">Powered By</string>
+    <string name="mutex_logo_in_splash_screen">mutex_logo_in_splash_screen</string>
+    <string name="mutexsummit">#MUTEXSummit</string>
+    <string name="location">Location</string>
+    <string name="speakers">Speakers</string>
+    <string name="partners">Partners</string>
 </resources>

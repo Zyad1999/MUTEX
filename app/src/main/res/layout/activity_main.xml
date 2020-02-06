@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backGround"
     tools:context=".MainActivity">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
 
      <ImageView
@@ -16,9 +19,11 @@
          android:layout_alignParentTop="true"
          android:layout_marginTop="97dp"
          android:layout_marginBottom="6sp"
+         android:layout_marginRight="8dp"
+         android:layout_marginLeft="8dp"
          android:paddingLeft="30sp"
          android:paddingRight="15sp"
-         android:src="@drawable/mtx" />
+         android:src="@drawable/mutex_splash" />
 
      <ImageView
          android:layout_width="143dp"
@@ -96,40 +101,41 @@
                    android:paddingRight="15sp"
                    android:text="Agenda"
                    android:textColor="#0a0a0a"
-                   android:textSize="9sp"
+                   android:textSize="12sp"
                    android:textStyle="bold" />
 
                <ImageButton
                    android:id="@+id/feedbackBtn"
                    android:layout_width="68dp"
                    android:layout_height="52dp"
-                   android:layout_alignParentLeft="true"
+                   android:layout_alignParentStart="true"
                    android:layout_alignParentBottom="true"
                    android:layout_marginBottom="23dp"
                    android:adjustViewBounds="true"
                    android:background="@color/backGround"
                    android:scaleType="fitCenter"
-                   android:src="@drawable/fd" />
+                   android:src="@drawable/heart" />
 
                <TextView
                    android:id="@+id/feedbackTv"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:layout_alignParentLeft="true"
+                   android:layout_alignParentStart="true"
                    android:layout_alignParentBottom="true"
-                   android:layout_marginLeft="8dp"
+                   android:layout_marginStart="8dp"
                    android:layout_marginBottom="12dp"
-                   android:paddingLeft="4sp"
-                   android:text="Feedback"
+                   android:paddingStart="4sp"
+                   android:paddingRight="4sp"
+                   android:text="@string/feedback"
                    android:textColor="#0a0a0a"
-                   android:textSize="9sp"
+                   android:textSize="12sp"
                    android:textStyle="bold" />
 
                <ImageButton
                    android:layout_width="56dp"
                    android:layout_height="56dp"
                    android:layout_alignParentTop="true"
-                   android:layout_alignParentRight="true"
+                   android:layout_alignParentEnd="true"
                    android:layout_marginBottom="20sp"
                    android:adjustViewBounds="true"
                    android:background="@color/backGround"
@@ -140,7 +146,7 @@
                    android:id="@+id/sponsorsButton"
                    android:layout_width="64dp"
                    android:layout_height="65dp"
-                   android:layout_alignParentLeft="true"
+                   android:layout_alignParentStart="true"
                    android:layout_alignParentTop="true"
                    android:adjustViewBounds="true"
                    android:background="@color/backGround"
@@ -158,9 +164,9 @@
                    android:layout_marginTop="47dp"
                    android:layout_marginBottom="54dp"
                    android:paddingLeft="4sp"
-                   android:text="Partners"
+                   android:text="@string/partners"
                    android:textColor="#0a0a0a"
-                   android:textSize="9sp"
+                   android:textSize="12sp"
                    android:textStyle="bold" />
 
                <ImageButton
@@ -179,9 +185,9 @@
                    android:layout_height="wrap_content"
                    android:layout_below="@+id/ff"
                    android:layout_centerInParent="true"
-                   android:text="Speakers"
+                   android:text="@string/speakers"
                    android:textColor="#0a0a0a"
-                   android:textSize="9sp"
+                   android:textSize="12sp"
                    android:textStyle="bold" />
 
                <TextView
@@ -191,16 +197,16 @@
                    android:layout_alignParentEnd="true"
                    android:layout_marginStart="83dp"
                    android:layout_marginTop="50sp"
-                   android:layout_marginEnd="1dp"
-                   android:layout_marginRight="5dp"
+                   android:layout_marginEnd="5dp"
                    android:layout_marginBottom="46dp"
-                   android:paddingRight="8sp"
-                   android:text="Location"
+                   android:paddingEnd="8sp"
+                   android:text="@string/location"
                    android:textColor="#0a0a0a"
-                   android:textSize="9sp"
+                   android:textSize="12sp"
                    android:textStyle="bold" />
           </RelativeLayout>
           <RelativeLayout
+              android:id="@+id/socialMediaLayout"
               android:layout_width="167sp"
               android:layout_height="48sp"
               android:layout_gravity="center_horizontal"
@@ -209,26 +215,26 @@
               android:paddingTop="9sp"
               android:paddingBottom="4sp">
 
-               <ImageButton
+               <ImageView
                    android:id="@+id/iv_instagram"
                    android:layout_width="40sp"
                    android:layout_height="40sp"
-                   android:layout_alignParentLeft="true"
+                   android:layout_alignParentStart="true"
                    android:layout_alignParentTop="true"
                    android:layout_alignParentBottom="true"
                    android:adjustViewBounds="true"
-                   android:background="@drawable/roundedbutton"
                    android:foreground="?attr/selectableItemBackground"
                    android:paddingLeft="3sp"
+                   android:paddingRight="3sp"
                    android:paddingTop="1sp"
                    android:scaleType="fitCenter"
-                   android:src="@drawable/inss" />
+                   android:src="@drawable/instagram" />
 
-               <ImageButton
+               <ImageView
                    android:id="@+id/iv_facebook"
                    android:layout_width="40sp"
                    android:layout_height="40sp"
-                   android:layout_alignParentLeft="true"
+                   android:layout_alignParentStart="true"
                    android:layout_alignParentTop="true"
                    android:layout_alignParentEnd="true"
                    android:layout_alignParentBottom="true"
@@ -236,48 +242,61 @@
                    android:layout_marginTop="3dp"
                    android:layout_marginEnd="87sp"
                    android:adjustViewBounds="true"
-                   android:background="@drawable/roundedbutton"
                    android:foreground="?attr/selectableItemBackground"
                    android:paddingTop="1sp"
                    android:scaleType="fitCenter"
-                   android:src="@drawable/fc" />
+                   android:src="@drawable/facebook" />
 
-               <ImageButton
-                   android:id="@+id/twitter"
-                   android:layout_width="40sp"
-                   android:layout_height="40sp"
-                   android:layout_alignParentLeft="true"
-                   android:layout_alignParentEnd="true"
-                   android:layout_alignParentBottom="true"
-                   android:layout_marginLeft="150sp"
-                   android:layout_marginTop="3sp"
-                   android:layout_marginEnd="44sp"
-                   android:adjustViewBounds="true"
-                   android:background="@drawable/roundedbutton"
-                   android:foreground="?attr/selectableItemBackground"
-                   android:paddingTop="1sp"
-                   android:scaleType="fitCenter"
-                   android:src="@drawable/tww" />
 
-               <ImageButton
+              <ImageView
+                  android:id="@+id/twitter"
+                  android:layout_width="40sp"
+                  android:layout_height="40sp"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentEnd="true"
+                  android:layout_alignParentBottom="true"
+                  android:layout_marginLeft="150sp"
+                  android:layout_marginTop="3sp"
+                  android:layout_marginEnd="44sp"
+                  android:adjustViewBounds="true"
+                  android:foreground="?attr/selectableItemBackground"
+                  android:paddingTop="1sp"
+                  android:scaleType="fitCenter"
+                  android:src="@drawable/twitter" />
+
+              <ImageView
                    android:id="@+id/linkd"
                    android:layout_width="35sp"
                    android:layout_height="35sp"
                    android:layout_alignParentTop="true"
-                   android:layout_alignParentRight="true"
+                   android:layout_alignParentEnd="true"
                    android:layout_alignParentBottom="true"
                    android:adjustViewBounds="true"
-                   android:background="@drawable/roundedbutton"
                    android:foreground="?attr/selectableItemBackground"
                    android:paddingTop="3sp"
                    android:layout_marginEnd="5sp"
                    android:layout_marginStart="177sp"
-                   android:paddingRight="3sp"
+                   android:paddingEnd="3sp"
+                   android:paddingStart="3sp"
                    android:scaleType="fitCenter"
-                   android:src="@drawable/linkd" />
+                   android:src="@drawable/linkedin" />
 
 
           </RelativeLayout>
 
+          <RelativeLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/tvhashtag"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/mutexsummit"
+                   android:textStyle="bold"
+                   android:textColor="#323ca8"/>
+          </RelativeLayout>
+
      </LinearLayout>
 </RelativeLayout>
+</ScrollView>

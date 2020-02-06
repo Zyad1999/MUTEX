@@ -19,6 +19,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.hsalf.smilerating.BaseRating;
 import com.hsalf.smilerating.SmileRating;
 
+import java.util.Objects;
+
 import life.sabujak.roundedbutton.RoundedButton;
 import studio.carbonylgroup.textfieldboxes.ExtendedEditText;
 
@@ -34,7 +36,7 @@ public class FeedBackActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed_back);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
 
         overallRating = findViewById(R.id.ratingViewOverall);
@@ -51,7 +53,8 @@ public class FeedBackActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()){
-                            Toast.makeText(FeedBackActivity.this, "Thanks for rating", Toast.LENGTH_LONG).show();
+                            Toast.makeText(FeedBackActivity.this, "Thanks for rating", Toast.LENGTH_SHORT).show();
+
                             finish();
                         }
                     }

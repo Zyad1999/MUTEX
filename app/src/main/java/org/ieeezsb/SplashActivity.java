@@ -18,7 +18,7 @@ public class SplashActivity extends AppCompatActivity {
 
     private long splashTime = 3000L;
     private Handler myHandler;
-    private ImageView mutex ;
+    private ImageView mutex, ieee ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,8 +27,11 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         mutex = findViewById(R.id.mutexImageViewSplash);
+        ieee = findViewById(R.id.imageView);
         Animation topAnimation = AnimationUtils.loadAnimation(this, R.anim.top_animation);
+        Animation bottomAnimation = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
         mutex.setAnimation(topAnimation);
+        ieee.setAnimation(bottomAnimation);
         myHandler = new Handler();
         myHandler.postDelayed(new Runnable() {
             @Override
