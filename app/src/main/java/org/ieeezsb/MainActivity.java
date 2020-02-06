@@ -6,12 +6,13 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import org.ieeezsb.speaker.SpeakersActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -28,13 +29,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mFaceBook =findViewById(R.id.iv_facebook);
+        mFaceBook = findViewById(R.id.iv_facebook);
         mFaceBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
-                intent.putExtra("url","https://www.facebook.com/MUTEX.Summit/?ref=gs&__tn__=%2CdK-R-R&eid=ARB9kh2MDdy_d3BcBdys0bTW9UWQaE9J0_8ouhQgpIB8yy37ppKWYq6-6auxFS8_UJTgMzk5Trr-4SFa&fref=gs&dti=181743375206602&hc_location=group");
-                if (!haveConnectionToInternet()){
+                intent.putExtra("url", "https://www.facebook.com/MUTEX.Summit/?ref=gs&__tn__=%2CdK-R-R&eid=ARB9kh2MDdy_d3BcBdys0bTW9UWQaE9J0_8ouhQgpIB8yy37ppKWYq6-6auxFS8_UJTgMzk5Trr-4SFa&fref=gs&dti=181743375206602&hc_location=group");
+                if (!haveConnectionToInternet()) {
                     noInternetToast();
                 } else {
                     startActivity(intent);
@@ -42,13 +43,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        mTwitter =findViewById(R.id.twitter);
+        mTwitter = findViewById(R.id.twitter);
         mTwitter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
-                intent.putExtra("url","https://twitter.com/MutexSummit?fbclid=IwAR3P32TEqe5el4jKbs2GDffXC0W9QRXL_mL8vZWsrN0Pyi-3GeazAy76xic");
-                if (!haveConnectionToInternet()){
+                intent.putExtra("url", "https://twitter.com/MutexSummit?fbclid=IwAR3P32TEqe5el4jKbs2GDffXC0W9QRXL_mL8vZWsrN0Pyi-3GeazAy76xic");
+                if (!haveConnectionToInternet()) {
                     noInternetToast();
                 } else {
                     startActivity(intent);
@@ -57,26 +58,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
 
-        mLinkdin =findViewById(R.id.linkd);
+        mLinkdin = findViewById(R.id.linkd);
         mLinkdin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
-                intent.putExtra("url","https://www.linkedin.com/company/mutexsummit/?fbclid=IwAR0YW9zONy1-hUW2hyHNF2cTDQXbK5C2tvqB5XgjQp6KaZ7HHVKts4Rd5EQ");
-                if (!haveConnectionToInternet()){
+                intent.putExtra("url", "https://www.linkedin.com/company/mutexsummit/?fbclid=IwAR0YW9zONy1-hUW2hyHNF2cTDQXbK5C2tvqB5XgjQp6KaZ7HHVKts4Rd5EQ");
+                if (!haveConnectionToInternet()) {
                     noInternetToast();
                 } else {
                     startActivity(intent);
                 }
             }
         });
-        mInsta =findViewById(R.id.iv_instagram);
+        mInsta = findViewById(R.id.iv_instagram);
         mInsta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
-                intent.putExtra("url","https://www.instagram.com/mutex.summit/?fbclid=IwAR1GA6wU9s4uS_vIFrVSs2wqFKBcRIDOwnBMNwfKIvJCnQsxBdGwoSrSunc");
-                if (!haveConnectionToInternet()){
+                intent.putExtra("url", "https://www.instagram.com/mutex.summit/?fbclid=IwAR1GA6wU9s4uS_vIFrVSs2wqFKBcRIDOwnBMNwfKIvJCnQsxBdGwoSrSunc");
+                if (!haveConnectionToInternet()) {
                     noInternetToast();
                 } else {
                     startActivity(intent);
@@ -88,8 +89,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
-                intent.putExtra("url","https://www.facebook.com/hashtag/mutexsummit");
-                if (!haveConnectionToInternet()){
+                intent.putExtra("url", "https://www.facebook.com/hashtag/mutexsummit");
+                if (!haveConnectionToInternet()) {
                     noInternetToast();
                 } else {
                     startActivity(intent);
@@ -104,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TvFeedback.setOnClickListener(this);
 // this part added by boyka for test 
         ImageView agenda = findViewById(R.id.agenda_button);
-       	agenda.setOnClickListener(new View.OnClickListener() {
+        agenda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent agendaIntent = new Intent(MainActivity.this, AgendaActivity.class);
@@ -121,28 +122,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        ImageView speakers = findViewById(R.id.speakers_button);
+        speakers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent speakersIntent = new Intent(MainActivity.this, SpeakersActivity.class);
+                startActivity(speakersIntent);
+            }
+        });
 
 
-        }
+    }
 
-        // Method to Check Internet Connection.
-    private boolean haveConnectionToInternet (){
+    // Method to Check Internet Connection.
+    private boolean haveConnectionToInternet() {
 
-        boolean haveWifi = false ;
+        boolean haveWifi = false;
         boolean haveMobileData = false;
         ConnectivityManager cm =
-                (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+                (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
         NetworkInfo[] networkInfos = cm.getAllNetworkInfo();
-        for (NetworkInfo info: networkInfos){
-            if (info.getTypeName().equalsIgnoreCase("wifi")){
-                if (info.isConnected()){
+        for (NetworkInfo info : networkInfos) {
+            if (info.getTypeName().equalsIgnoreCase("wifi")) {
+                if (info.isConnected()) {
                     haveWifi = true;
                 }
             }
 
-            if (info.getTypeName().equalsIgnoreCase("mobile")){
-                if (info.isConnected()){
+            if (info.getTypeName().equalsIgnoreCase("mobile")) {
+                if (info.isConnected()) {
                     haveMobileData = true;
                 }
             }
@@ -150,21 +159,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         return haveMobileData || haveWifi;
 
+    }
+
+
+    private void checkInternetForFeedback() {
+
+        if (!haveConnectionToInternet()) {
+            noInternetToast();
+        } else {
+            Intent feedBackIntent = new Intent(MainActivity.this, FeedBackActivity.class);
+            startActivity(feedBackIntent);
         }
+    }
 
-
-        private void checkInternetForFeedback(){
-
-            if (!haveConnectionToInternet()){
-                noInternetToast();
-            } else {
-                Intent feedBackIntent = new Intent(MainActivity.this, FeedBackActivity.class);
-                startActivity(feedBackIntent);
-            }
-        }
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.feedbackBtn:
             case R.id.feedbackTv:
                 checkInternetForFeedback();
@@ -172,7 +182,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void noInternetToast(){
+    private void noInternetToast() {
         Toast.makeText(MainActivity.this, "No Internet Connection", Toast.LENGTH_SHORT).show();
     }
 }

@@ -12,34 +12,49 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity" android:theme="@style/SplashTheme">
+
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".speaker.SpeakersActivity"
+            android:label="@string/speakers"
+            android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".FeedBackActivity"
             android:label="@string/feedback_form"
             android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".AgendaActivity"
             android:label="agenda"
             android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".Partners"
             android:label="Partners"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".MainActivity" android:theme="@style/HomeTheme">
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/HomeTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WebViewActivity"
-            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".WebViewActivity"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>
