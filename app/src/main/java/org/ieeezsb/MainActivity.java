@@ -16,12 +16,52 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private ImageButton btnFeedBack;
     private TextView TvFeedback;
+    private ImageButton mFaceBook;
+    private ImageButton mTwitter;
+    private ImageButton mLinkdin;
+    private ImageButton mInsta;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mFaceBook =findViewById(R.id.iv_facebook);
+        mFaceBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
+                intent.putExtra("url","https://www.facebook.com/MUTEX.Summit/?ref=gs&__tn__=%2CdK-R-R&eid=ARB9kh2MDdy_d3BcBdys0bTW9UWQaE9J0_8ouhQgpIB8yy37ppKWYq6-6auxFS8_UJTgMzk5Trr-4SFa&fref=gs&dti=181743375206602&hc_location=group");
+                startActivity(intent);
+            }
+        });
+        mTwitter =findViewById(R.id.twitter);
+        mTwitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
+                intent.putExtra("url","https://twitter.com/MutexSummit?fbclid=IwAR3P32TEqe5el4jKbs2GDffXC0W9QRXL_mL8vZWsrN0Pyi-3GeazAy76xic");
+            }
+        });
+        mLinkdin =findViewById(R.id.linkd);
+        mLinkdin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
+                intent.putExtra("url","https://www.linkedin.com/company/mutexsummit/?fbclid=IwAR0YW9zONy1-hUW2hyHNF2cTDQXbK5C2tvqB5XgjQp6KaZ7HHVKts4Rd5EQ");
+                startActivity(intent);
+            }
+        });
+        mInsta =findViewById(R.id.iv_instagram);
+        mInsta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
+                intent.putExtra("url","https://www.instagram.com/mutex.summit/?fbclid=IwAR1GA6wU9s4uS_vIFrVSs2wqFKBcRIDOwnBMNwfKIvJCnQsxBdGwoSrSunc");
+                startActivity(intent);
+            }
+        });
         btnFeedBack = findViewById(R.id.feedbackBtn);
         TvFeedback = findViewById(R.id.feedbackTv);
 

@@ -30,7 +30,7 @@
 
      <LinearLayout
          android:layout_width="match_parent"
-         android:layout_height="506dp"
+         android:layout_height="wrap_content"
          android:layout_below="@id/image"
          android:gravity="center_horizontal"
          android:orientation="vertical"
@@ -199,6 +199,84 @@
                    android:textColor="#0a0a0a"
                    android:textSize="9sp"
                    android:textStyle="bold" />
+          </RelativeLayout>
+          <RelativeLayout
+              android:layout_width="167sp"
+              android:layout_height="48sp"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="30sp"
+              android:layout_marginBottom="10sp"
+              android:paddingTop="9sp"
+              android:paddingBottom="4sp">
+
+               <ImageButton
+                   android:id="@+id/iv_instagram"
+                   android:layout_width="40sp"
+                   android:layout_height="40sp"
+                   android:layout_alignParentLeft="true"
+                   android:layout_alignParentTop="true"
+                   android:layout_alignParentBottom="true"
+                   android:adjustViewBounds="true"
+                   android:background="@drawable/roundedbutton"
+                   android:foreground="?attr/selectableItemBackground"
+                   android:paddingLeft="3sp"
+                   android:paddingTop="1sp"
+                   android:scaleType="fitCenter"
+                   android:src="@drawable/inss" />
+
+               <ImageButton
+                   android:id="@+id/iv_facebook"
+                   android:layout_width="40sp"
+                   android:layout_height="40sp"
+                   android:layout_alignParentLeft="true"
+                   android:layout_alignParentTop="true"
+                   android:layout_alignParentEnd="true"
+                   android:layout_alignParentBottom="true"
+                   android:layout_marginStart="42sp"
+                   android:layout_marginTop="3dp"
+                   android:layout_marginEnd="87sp"
+                   android:adjustViewBounds="true"
+                   android:background="@drawable/roundedbutton"
+                   android:foreground="?attr/selectableItemBackground"
+                   android:paddingTop="1sp"
+                   android:scaleType="fitCenter"
+                   android:src="@drawable/fc" />
+
+               <ImageButton
+                   android:id="@+id/twitter"
+                   android:layout_width="40sp"
+                   android:layout_height="40sp"
+                   android:layout_alignParentLeft="true"
+                   android:layout_alignParentEnd="true"
+                   android:layout_alignParentBottom="true"
+                   android:layout_marginLeft="150sp"
+                   android:layout_marginTop="3sp"
+                   android:layout_marginEnd="44sp"
+                   android:adjustViewBounds="true"
+                   android:background="@drawable/roundedbutton"
+                   android:foreground="?attr/selectableItemBackground"
+                   android:paddingTop="1sp"
+                   android:scaleType="fitCenter"
+                   android:src="@drawable/tww" />
+
+               <ImageButton
+                   android:id="@+id/linkd"
+                   android:layout_width="35sp"
+                   android:layout_height="35sp"
+                   android:layout_alignParentTop="true"
+                   android:layout_alignParentRight="true"
+                   android:layout_alignParentBottom="true"
+                   android:adjustViewBounds="true"
+                   android:background="@drawable/roundedbutton"
+                   android:foreground="?attr/selectableItemBackground"
+                   android:paddingTop="3sp"
+                   android:layout_marginEnd="5sp"
+                   android:layout_marginStart="177sp"
+                   android:paddingRight="3sp"
+                   android:scaleType="fitCenter"
+                   android:src="@drawable/linkd" />
+
+
           </RelativeLayout>
 
      </LinearLayout>
