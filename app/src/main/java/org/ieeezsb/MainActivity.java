@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageButton btnFeedBack;
+    private ImageView btnFeedBack;
     private TextView TvFeedback, hashtag;
     private ImageView mFaceBook;
     private ImageView mTwitter;
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnFeedBack.setOnClickListener(this);
         TvFeedback.setOnClickListener(this);
 // this part added by boyka for test 
-        ImageButton agenda = findViewById(R.id.agenda_button);
+        ImageView agenda = findViewById(R.id.agenda_button);
        	agenda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 /////////////////////////////////////
-        ImageButton sponsors = findViewById(R.id.sponsorsButton);
+        ImageView sponsors = findViewById(R.id.sponsorsButton);
         sponsors.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
