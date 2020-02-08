@@ -11,8 +11,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mikhaellopez.circularimageview.CircularImageView;
-
 import org.ieeezsb.R;
 
 import java.util.ArrayList;
@@ -70,6 +68,7 @@ public class SpeakerAdapter extends RecyclerView.Adapter<SpeakerAdapter.ViewHold
             emptySocialMedia.get(0).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    // TODO : Facebook intent
                     Toast.makeText(context, "Facebook", Toast.LENGTH_SHORT).show();
                 }
             });
@@ -81,6 +80,7 @@ public class SpeakerAdapter extends RecyclerView.Adapter<SpeakerAdapter.ViewHold
             emptySocialMedia.get(0).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    // TODO : Twitter intent
                     Toast.makeText(context, "Twitter", Toast.LENGTH_SHORT).show();
                 }
             });
@@ -92,6 +92,7 @@ public class SpeakerAdapter extends RecyclerView.Adapter<SpeakerAdapter.ViewHold
             emptySocialMedia.get(0).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    // TODO : Linked in intent
                     Toast.makeText(context, "Linked in", Toast.LENGTH_SHORT).show();
                 }
             });
@@ -103,6 +104,7 @@ public class SpeakerAdapter extends RecyclerView.Adapter<SpeakerAdapter.ViewHold
             emptySocialMedia.get(0).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    // TODO : Github intent
                     Toast.makeText(context, "Github", Toast.LENGTH_SHORT).show();
                 }
             });
@@ -123,9 +125,8 @@ public class SpeakerAdapter extends RecyclerView.Adapter<SpeakerAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        CircularImageView speakerImage;
         TextView speakerName, speakerDescription;
-        ImageView social1, social2, social3, social4;
+        ImageView speakerImage, social1, social2, social3, social4;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -133,7 +134,7 @@ public class SpeakerAdapter extends RecyclerView.Adapter<SpeakerAdapter.ViewHold
 
             speakerImage = itemView.findViewById(R.id.speaker_image);
             speakerName = itemView.findViewById(R.id.speaker_name);
-            speakerDescription = itemView.findViewById(R.id.speaker_desrcription);
+            speakerDescription = itemView.findViewById(R.id.speaker_description);
             social1 = itemView.findViewById(R.id.social_media_1);
             social2 = itemView.findViewById(R.id.social_media_2);
             social3 = itemView.findViewById(R.id.social_media_3);
