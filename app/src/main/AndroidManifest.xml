@@ -32,6 +32,10 @@
             android:name=".FeedBackActivity"
             android:label="@string/feedback_form"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DescriptionActivity"
+            android:label="Description"
+            android:parentActivityName=".AgendaActivity"/>
 
         <activity
             android:name=".AgendaActivity"
