@@ -12,7 +12,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="25sp"
-            android:paddingLeft="16dp"
             android:layout_weight="1"
             android:gravity="center"
             android:textColor="@color/colorPrimary"
@@ -28,7 +27,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:paddingLeft="16dp"
             android:textSize="25sp"
             android:textColor="@color/colorPrimary"
             android:text="Workshops"
@@ -44,8 +42,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:layoutAnimation="@anim/layout_slide_from_bottom"
+        android:background="@color/backGround"
         android:divider="@null"
-        android:dividerHeight="0dp">
+        android:dividerHeight="8dp">
 
 
     </ListView>

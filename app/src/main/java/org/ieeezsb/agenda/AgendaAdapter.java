@@ -1,4 +1,4 @@
-package org.ieeezsb;
+package org.ieeezsb.agenda;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -6,10 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+
+import org.ieeezsb.R;
 
 import java.util.ArrayList;
 
@@ -42,8 +43,8 @@ public class AgendaAdapter extends ArrayAdapter<TalkData> {
         talkTextView.setText(currentAndroidFlavor.getTalk());
 
         TextView speakerTextView =  listItemView.findViewById(R.id.speaker);
-        
-        if (currentAndroidFlavor.getSpeaker()=="None")
+
+        if (currentAndroidFlavor.getSpeaker().equals("None"))
             speakerTextView.setVisibility(View.GONE);
         else {
             speakerTextView.setVisibility(View.VISIBLE);

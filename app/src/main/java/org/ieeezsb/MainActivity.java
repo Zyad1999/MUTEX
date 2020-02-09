@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import org.ieeezsb.speaker.SpeakersActivity;
+import org.ieeezsb.agenda.AgendaActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
