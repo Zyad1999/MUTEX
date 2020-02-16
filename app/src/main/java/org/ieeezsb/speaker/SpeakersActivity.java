@@ -38,7 +38,7 @@ public class SpeakersActivity extends AppCompatActivity {
     private void getAllSpeakers() {
 
         speakerList.add(new Speaker(
-                R.drawable.speaker1,
+                R.drawable.ahmed_samir,
                 "Ahmed Abd-Elfattah",
                 "Knowledge Management Manager at Valeo",
                 "www",
@@ -47,7 +47,7 @@ public class SpeakersActivity extends AppCompatActivity {
                 "www"));
 
         speakerList.add(new Speaker(
-                R.drawable.speaker2,
+                R.drawable.ahmed_samir,
                 "Ahmed Said",
                 "IBM",
                 null,
@@ -56,7 +56,7 @@ public class SpeakersActivity extends AppCompatActivity {
                 null));
 
         speakerList.add(new Speaker(
-                R.drawable.speaker3,
+                R.drawable.ahmed_samir,
                 "Amr Abulnaga",
                 "The Regional Technical Consultant at Oracle",
                 "www",
@@ -65,7 +65,7 @@ public class SpeakersActivity extends AppCompatActivity {
                 "www"));
 
         speakerList.add(new Speaker(
-                R.drawable.speaker4,
+                R.drawable.ahmed_samir,
                 "Amr Ali",
                 "Big data and Analytics Technical Consultant at Oracle",
                 null,
@@ -74,7 +74,7 @@ public class SpeakersActivity extends AppCompatActivity {
                 "www"));
 
         speakerList.add(new Speaker(
-                R.drawable.speaker5,
+                R.drawable.ahmed_samir,
                 "Ayman Ragab",
                 "Consultant in The R_D Department at NTRA",
                 null,
@@ -83,7 +83,7 @@ public class SpeakersActivity extends AppCompatActivity {
                 "www"));
 
         speakerList.add(new Speaker(
-                R.drawable.speaker6,
+                R.drawable.ahmed_samir,
                 "Mohamed Abd-Elmonem",
                 "Radio Optimization Senior Engineer at Vodafone",
                 "www",
@@ -93,7 +93,7 @@ public class SpeakersActivity extends AppCompatActivity {
 
 
         speakerList.add(new Speaker(
-                R.drawable.speaker7,
+                R.drawable.ahmed_samir,
                 "Mostafa Helmy",
                 "Identity _ Access Management Advisor at RSA Security",
                 "www",
@@ -102,7 +102,7 @@ public class SpeakersActivity extends AppCompatActivity {
                 "www"));
 
         speakerList.add(new Speaker(
-                R.drawable.speaker8,
+                R.drawable.ahmed_samir,
                 "Omar Amer",
                 "Machine Learning Engineer at IBM",
                 null,
@@ -111,7 +111,7 @@ public class SpeakersActivity extends AppCompatActivity {
                 null));
 
         speakerList.add(new Speaker(
-                R.drawable.speaker9,
+                R.drawable.ahmed_samir,
                 "Ghada Bahig",
                 "Engineering Manager at Mentor Graphics",
                 null,
