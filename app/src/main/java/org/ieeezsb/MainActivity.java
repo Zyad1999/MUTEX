@@ -2,6 +2,7 @@ package org.ieeezsb;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -9,15 +10,28 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.FragmentActivity;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.stepstone.apprating.AppRatingDialog;
+import com.stepstone.apprating.listener.RatingDialogListener;
 
 import org.ieeezsb.agenda.AgendaActivity;
 import org.ieeezsb.speaker.SpeakersActivity;
+import org.jetbrains.annotations.NotNull;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+import static com.google.android.gms.common.util.CollectionUtils.listOf;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener,  RatingDialogListener {
 
     private CardView btnFeedBack;
     private TextView TvFeedback, hashtag;
@@ -173,8 +187,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (!haveConnectionToInternet()) {
             noInternetToast();
         } else {
-            Intent feedBackIntent = new Intent(MainActivity.this, FeedBackActivity.class);
-            startActivity(feedBackIntent);
+
+            showRatingDialog();
+
         }
     }
 
@@ -191,4 +206,63 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void noInternetToast() {
         Toast.makeText(MainActivity.this, "No Internet Connection", Toast.LENGTH_SHORT).show();
     }
+
+    @Override
+    public void onNegativeButtonClicked() {
+
+    }
+
+    @Override
+    public void onNeutralButtonClicked() {
+
+    }
+
+    @Override
+    public void onPositiveButtonClicked(int i, @NotNull String s) {
+
+        FeedBackModel feedBackModel;
+        final DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
+        feedBackModel = new FeedBackModel(s,i);
+        rootRef.child("ratings").child(generateRatingId()).setValue(feedBackModel).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()){
+                    Toast.makeText(MainActivity.this, "Thanks for rating", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+
+
+    }
+
+    private void showRatingDialog(){
+        new AppRatingDialog.Builder()
+                .setPositiveButtonText("Submit")
+                .setNegativeButtonText("Cancel")
+                .setNeutralButtonText("Later")
+                .setNoteDescriptions(listOf("Very Bad", "Not good", "Quite ok", "Very Good", "Excellent !!!"))
+                .setDefaultRating(2)
+                .setTitle("Rate MUTEX")
+                .setDescription("Please select some stars and give your feedback")
+                .setStarColor(R.color.starColor)
+                .setNoteDescriptionTextColor(R.color.noteDescriptionTextColor)
+                .setTitleTextColor(R.color.titleTextColor)
+                .setDescriptionTextColor(R.color.descriptionTextColor)
+                .setCommentTextColor(R.color.commentTextColor)
+                .setCommentBackgroundColor(R.color.CommentBackground)
+                .setWindowAnimation(R.style.MyDialogSlideHorizontalAnimation)
+                .setHint("Please write your comment here")
+                .setHintTextColor(R.color.hintTextColor)
+                .setCancelable(false)
+                .setCanceledOnTouchOutside(false)
+                .create(this)
+                .show();
+    }
+
+    private String generateRatingId(){
+        long time= System.currentTimeMillis();
+        return "Rate" + time;
+    }
+
 }
