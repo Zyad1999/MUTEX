@@ -1,9 +1,9 @@
 package org.ieeezsb;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Partners extends AppCompatActivity {
 
@@ -43,5 +43,13 @@ public class Partners extends AppCompatActivity {
 
         ImageView startup2 = findViewById(R.id.startup2);
         startup2.setImageResource(R.drawable.startuppartner1);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (isFinishing()) {
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        }
     }
 }

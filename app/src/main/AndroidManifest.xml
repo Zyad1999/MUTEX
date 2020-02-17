@@ -52,8 +52,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".WebViewActivity"
+            android:name=".MapsActivity"
+            android:label="Location"
             android:parentActivityName=".MainActivity" />
+
     </application>
 
 </manifest>
