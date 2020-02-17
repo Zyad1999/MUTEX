@@ -61,7 +61,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="#MutixSummit"
+        android:text="#MutexSummit"
         android:textColor="#3F51B5"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
