@@ -26,8 +26,8 @@ public class SplashActivity extends AppCompatActivity {
         WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
 
-        mutex = findViewById(R.id.mutexImageViewSplash);
-        ieee = findViewById(R.id.imageView);
+        mutex = findViewById(R.id.mutexText);
+        ieee = findViewById(R.id.ieee_splash_white);
         Animation topAnimation = AnimationUtils.loadAnimation(this, R.anim.top_animation);
         Animation bottomAnimation = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
         mutex.setAnimation(topAnimation);

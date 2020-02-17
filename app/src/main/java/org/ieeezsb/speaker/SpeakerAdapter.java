@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,7 +41,6 @@ public class SpeakerAdapter extends RecyclerView.Adapter<SpeakerAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         currentSpeaker = speakersList.get(position);
-
         holder.speakerImage.setImageResource(currentSpeaker.getImageResource());
         holder.speakerName.setText(currentSpeaker.getName());
         holder.speakerDescription.setText(currentSpeaker.getDescription());
@@ -50,7 +50,7 @@ public class SpeakerAdapter extends RecyclerView.Adapter<SpeakerAdapter.ViewHold
     }
 
     private void initSocialMedia(ViewHolder holder) {
-        ArrayList<ImageView> emptySocialMedia = new ArrayList<>();
+        ArrayList<ImageButton> emptySocialMedia = new ArrayList<>();
         emptySocialMedia.add(holder.social1);
         emptySocialMedia.add(holder.social2);
         emptySocialMedia.add(holder.social3);
@@ -126,7 +126,8 @@ public class SpeakerAdapter extends RecyclerView.Adapter<SpeakerAdapter.ViewHold
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView speakerName, speakerDescription;
-        ImageView speakerImage, social1, social2, social3, social4;
+        ImageView speakerImage;
+        ImageButton social1, social2, social3, social4;
 
 
         public ViewHolder(@NonNull View itemView) {

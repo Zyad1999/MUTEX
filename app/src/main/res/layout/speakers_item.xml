@@ -62,49 +62,61 @@
             app:layout_constraintTop_toBottomOf="@+id/speaker_name"
             tools:text="Description" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/social_media_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/speaker_name"
             app:layout_constraintTop_toBottomOf="@+id/speaker_description"
             app:layout_constraintVertical_bias="0.0"
-            tools:srcCompat="@drawable/ic_facebook" />
+            tools:src="@drawable/ic_facebook" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/social_media_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="true"
             app:layout_constraintStart_toEndOf="@+id/social_media_1"
             app:layout_constraintTop_toBottomOf="@+id/speaker_description"
-            tools:srcCompat="@drawable/ic_twitter" />
+            tools:src="@drawable/ic_twitter" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/social_media_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="true"
             app:layout_constraintStart_toEndOf="@+id/social_media_2"
             app:layout_constraintTop_toBottomOf="@+id/speaker_description"
-            tools:srcCompat="@drawable/ic_linkedin" />
+            tools:src="@drawable/ic_linkedin" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/social_media_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/social_media_3"
             app:layout_constraintTop_toBottomOf="@+id/speaker_description"
-            tools:srcCompat="@drawable/ic_github" />
+            tools:src="@drawable/ic_github" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

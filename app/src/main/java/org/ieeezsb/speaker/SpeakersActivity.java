@@ -22,7 +22,6 @@ public class SpeakersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_speakers);
 
-
         initRecyclerView();
         getAllSpeakers();
 
@@ -38,7 +37,7 @@ public class SpeakersActivity extends AppCompatActivity {
     private void getAllSpeakers() {
 
         speakerList.add(new Speaker(
-                R.drawable.speaker1,
+                R.drawable.ahmed_abdelfattah,
                 "Ahmed Abd-Elfattah",
                 "Knowledge Management Manager at Valeo",
                 "www",
@@ -47,7 +46,7 @@ public class SpeakersActivity extends AppCompatActivity {
                 "www"));
 
         speakerList.add(new Speaker(
-                R.drawable.speaker2,
+                R.drawable.ahmed_said,
                 "Ahmed Said",
                 "IBM",
                 null,
@@ -56,7 +55,7 @@ public class SpeakersActivity extends AppCompatActivity {
                 null));
 
         speakerList.add(new Speaker(
-                R.drawable.speaker3,
+                R.drawable.amr_abulnaga,
                 "Amr Abulnaga",
                 "The Regional Technical Consultant at Oracle",
                 "www",
@@ -65,7 +64,7 @@ public class SpeakersActivity extends AppCompatActivity {
                 "www"));
 
         speakerList.add(new Speaker(
-                R.drawable.speaker4,
+                R.drawable.amr_ali,
                 "Amr Ali",
                 "Big data and Analytics Technical Consultant at Oracle",
                 null,
@@ -74,7 +73,7 @@ public class SpeakersActivity extends AppCompatActivity {
                 "www"));
 
         speakerList.add(new Speaker(
-                R.drawable.speaker5,
+                R.drawable.ayman_ragab,
                 "Ayman Ragab",
                 "Consultant in The R_D Department at NTRA",
                 null,
@@ -83,7 +82,7 @@ public class SpeakersActivity extends AppCompatActivity {
                 "www"));
 
         speakerList.add(new Speaker(
-                R.drawable.speaker6,
+                R.drawable.mohamed_abdelmonem,
                 "Mohamed Abd-Elmonem",
                 "Radio Optimization Senior Engineer at Vodafone",
                 "www",
@@ -93,7 +92,7 @@ public class SpeakersActivity extends AppCompatActivity {
 
 
         speakerList.add(new Speaker(
-                R.drawable.speaker7,
+                R.drawable.mostafa_helmy,
                 "Mostafa Helmy",
                 "Identity _ Access Management Advisor at RSA Security",
                 "www",
@@ -102,7 +101,7 @@ public class SpeakersActivity extends AppCompatActivity {
                 "www"));
 
         speakerList.add(new Speaker(
-                R.drawable.speaker8,
+                R.drawable.omar_amer,
                 "Omar Amer",
                 "Machine Learning Engineer at IBM",
                 null,
@@ -111,7 +110,171 @@ public class SpeakersActivity extends AppCompatActivity {
                 null));
 
         speakerList.add(new Speaker(
-                R.drawable.speaker9,
+                R.drawable.ghada_bahig,
+                "Ghada Bahig",
+                "Engineering Manager at Mentor Graphics",
+                null,
+                "www",
+                "www",
+                null));
+
+        speakerList.add(new Speaker(
+                R.drawable.ahmed_abdelfattah,
+                "Ahmed Abd-Elfattah",
+                "Knowledge Management Manager at Valeo",
+                "www",
+                "www",
+                "www",
+                "www"));
+
+        speakerList.add(new Speaker(
+                R.drawable.ahmed_said,
+                "Ahmed Said",
+                "IBM",
+                null,
+                "www",
+                "www",
+                null));
+
+        speakerList.add(new Speaker(
+                R.drawable.amr_abulnaga,
+                "Amr Abulnaga",
+                "The Regional Technical Consultant at Oracle",
+                "www",
+                null,
+                null,
+                "www"));
+
+        speakerList.add(new Speaker(
+                R.drawable.amr_ali,
+                "Amr Ali",
+                "Big data and Analytics Technical Consultant at Oracle",
+                null,
+                null,
+                null,
+                "www"));
+
+        speakerList.add(new Speaker(
+                R.drawable.ayman_ragab,
+                "Ayman Ragab",
+                "Consultant in The R_D Department at NTRA",
+                null,
+                "www",
+                "www",
+                "www"));
+
+        speakerList.add(new Speaker(
+                R.drawable.mohamed_abdelmonem,
+                "Mohamed Abd-Elmonem",
+                "Radio Optimization Senior Engineer at Vodafone",
+                "www",
+                null,
+                "www",
+                "www"));
+
+
+        speakerList.add(new Speaker(
+                R.drawable.mostafa_helmy,
+                "Mostafa Helmy",
+                "Identity _ Access Management Advisor at RSA Security",
+                "www",
+                "www",
+                "www",
+                "www"));
+
+        speakerList.add(new Speaker(
+                R.drawable.omar_amer,
+                "Omar Amer",
+                "Machine Learning Engineer at IBM",
+                null,
+                null,
+                null,
+                null));
+
+        speakerList.add(new Speaker(
+                R.drawable.ghada_bahig,
+                "Ghada Bahig",
+                "Engineering Manager at Mentor Graphics",
+                null,
+                "www",
+                "www",
+                null));
+
+        speakerList.add(new Speaker(
+                R.drawable.ahmed_abdelfattah,
+                "Ahmed Abd-Elfattah",
+                "Knowledge Management Manager at Valeo",
+                "www",
+                "www",
+                "www",
+                "www"));
+
+        speakerList.add(new Speaker(
+                R.drawable.ahmed_said,
+                "Ahmed Said",
+                "IBM",
+                null,
+                "www",
+                "www",
+                null));
+
+        speakerList.add(new Speaker(
+                R.drawable.amr_abulnaga,
+                "Amr Abulnaga",
+                "The Regional Technical Consultant at Oracle",
+                "www",
+                null,
+                null,
+                "www"));
+
+        speakerList.add(new Speaker(
+                R.drawable.amr_ali,
+                "Amr Ali",
+                "Big data and Analytics Technical Consultant at Oracle",
+                null,
+                null,
+                null,
+                "www"));
+
+        speakerList.add(new Speaker(
+                R.drawable.ayman_ragab,
+                "Ayman Ragab",
+                "Consultant in The R_D Department at NTRA",
+                null,
+                "www",
+                "www",
+                "www"));
+
+        speakerList.add(new Speaker(
+                R.drawable.mohamed_abdelmonem,
+                "Mohamed Abd-Elmonem",
+                "Radio Optimization Senior Engineer at Vodafone",
+                "www",
+                null,
+                "www",
+                "www"));
+
+
+        speakerList.add(new Speaker(
+                R.drawable.mostafa_helmy,
+                "Mostafa Helmy",
+                "Identity _ Access Management Advisor at RSA Security",
+                "www",
+                "www",
+                "www",
+                "www"));
+
+        speakerList.add(new Speaker(
+                R.drawable.omar_amer,
+                "Omar Amer",
+                "Machine Learning Engineer at IBM",
+                null,
+                null,
+                null,
+                null));
+
+        speakerList.add(new Speaker(
+                R.drawable.ghada_bahig,
                 "Ghada Bahig",
                 "Engineering Manager at Mentor Graphics",
                 null,

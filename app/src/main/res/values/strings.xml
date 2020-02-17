@@ -11,4 +11,13 @@
     <string name="agenda">Agenda</string>
     <string name="address">Zagazig</string>
     <string name="link_map">http://bit.ly/3bdnR9a</string>
+
+
+
+    <string name="send_review">Send review</string>
+    <string name="cancel">Cancel</string>
+    <string name="later">Later</string>
+    <string name="title">App rating</string>
+    <string name="description">Please write your feedback</string>
+    <string name="defaultComment">This app is pretty cool !</string>
 </resources>
