@@ -56,6 +56,7 @@
         </activity>
         <activity
             android:name=".MapsActivity"
+            android:theme="@style/Maps"
             android:label="Location"
             android:parentActivityName=".MainActivity" />
 
