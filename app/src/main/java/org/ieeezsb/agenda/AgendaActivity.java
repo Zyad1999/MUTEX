@@ -13,23 +13,111 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityOptionsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import org.ieeezsb.R;
 
 import java.util.ArrayList;
 
 public class AgendaActivity extends AppCompatActivity {
-
+    private ArrayList<TalkData> Day1=new ArrayList<>();
+    private ArrayList<TalkData> Day2=new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         setContentView(R.layout.agenda_activity);
+        gettalks();
+        final AgendaAdapter adapter1 = new AgendaAdapter(this, Day1);
+        final AgendaAdapter adapter2 = new AgendaAdapter(this, Day2);
 
 
-        final ArrayList<TalkData> Day1=new ArrayList<>();
-        final ArrayList<TalkData> Day2=new ArrayList<>();
 
+
+
+
+
+        final ListView listView = (ListView) findViewById(R.id.agenda_list);
+
+        listView.setAdapter(adapter1);
+
+// show day1 agenda when 1st day clicked
+        final Button day1_button = findViewById(R.id.day1);
+        final Button day2_button = findViewById(R.id.day2);
+        day1_button.setTextColor(getColor(R.color.backGround));
+        day1_button.setBackgroundResource(R.drawable.solid_bottons);
+
+        day1_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                day1_button.setTextColor(getColor(R.color.backGround));
+                day2_button.setTextColor(getColor(R.color.colorPrimary));
+                day1_button.setBackgroundResource(R.drawable.solid_bottons);
+                day2_button.setBackgroundResource(R.drawable.borderd_button);
+
+                listView.setAdapter(adapter1);
+                LayoutAnimationController layoutAnimationController= AnimationUtils.loadLayoutAnimation(AgendaActivity.this,R.anim.layout_slide_from_bottom);
+                listView.setLayoutAnimation(layoutAnimationController);
+
+            }
+        });
+
+// show day2 agenda when 2st day clicked
+
+        day2_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                day1_button.setTextColor(getColor(R.color.colorPrimary));
+                day2_button.setTextColor(getColor(R.color.backGround));
+                day1_button.setBackgroundResource(R.drawable.borderd_button);
+                day2_button.setBackgroundResource(R.drawable.solid_bottons);
+
+               listView.setAdapter(adapter2);
+                LayoutAnimationController layoutAnimationController= AnimationUtils.loadLayoutAnimation(AgendaActivity.this,R.anim.layout_slide_from_bottom);
+                listView.setLayoutAnimation(layoutAnimationController);
+            }
+        });
+
+
+       listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent agendaIntent = new Intent(AgendaActivity.this, DescriptionActivity.class);
+
+                if (listView.getAdapter()==adapter1)
+                {
+                   agendaIntent.putExtra("des", Day1.get(position).getDescription());
+                    agendaIntent.putExtra("sp", Day1.get(position).getSpeaker());
+                    agendaIntent.putExtra("img",Day1.get(position).getImage());
+                }
+                else
+                    {
+                    agendaIntent.putExtra("des", Day2.get(position).getDescription());
+                    agendaIntent.putExtra("sp", Day2.get(position).getSpeaker());
+                    agendaIntent.putExtra("img", Day2.get(position).getImage());
+                }
+
+
+
+
+                ImageView image = findViewById(R.id.speaker_img);
+
+                ActivityOptionsCompat activityOp=ActivityOptionsCompat.makeSceneTransitionAnimation(AgendaActivity.this,image,"speaker photo");
+
+
+                startActivity(agendaIntent,activityOp.toBundle());
+
+
+
+            }
+        });
+
+
+    }
+
+    private void gettalks(){
         Day1.add(new TalkData("09:00-10:00", "Registration","None","Confirm your attending and get your gifts",R.drawable.reg_));
         Day1.add(new TalkData("10:00-10:30", "Welcome Speech","IEEE Zagazig","welcome to MUTEX",R.drawable.welcome));
         Day1.add(new TalkData("10:30-11:15", "Machine Learning","Hesham Eraqi","Hesham is currently a Senior Principal Engineer and Deep Learning Senior Expert At Valeo. He is also an Adjunct Faculty/Lecturer at the Computer Science and Engineering Department at the American University in Cairo (AUC).\n" +
@@ -68,7 +156,7 @@ public class AgendaActivity extends AppCompatActivity {
                 "\n" +
                 "Strong education professional with a Bachelor's Engineering focused in Mechanical Engineering from Alexandria University.",R.drawable.ebeid_atef));
         Day1.add(new TalkData("03:05-03:30", "Closing","None","jfioeh sdfbvuewbrugvu jebfvueb ejub ",R.drawable.closing));
-        final AgendaAdapter adapter1 = new AgendaAdapter(this, Day1);
+
 
         Day2.add(new TalkData("10:00-01:00", "5G","Bassem Ibrahim","jfioeh sdfbvuewbrugvu jebfvueb ejub ",R.drawable.ibm));
         Day2.add(new TalkData("10:00-01:00", "Software Defined Networks","Nada Nasr","jfioeh sdfbvuewbrugvu jebfvueb ejub ",R.drawable.ibm));
@@ -76,92 +164,8 @@ public class AgendaActivity extends AppCompatActivity {
         Day2.add(new TalkData("01:00-04:00", "BlochChain","Amr Abd El-hafiz","jfioeh sdfbvuewbrugvu jebfvueb ejub ",R.drawable.ibm));
         Day2.add(new TalkData("01:00-04:00", "entrepreneurship","Nadeem Barakat","jfioeh sdfbvuewbrugvu jebfvueb ejub ",R.drawable.ibm));
 
-        final AgendaAdapter adapter2 = new AgendaAdapter(this, Day2);
-
-
-        final ListView listView = (ListView) findViewById(R.id.agenda_list);
-        listView.setAdapter(adapter1);
-
-// show day1 agenda when 1st day clicked
-        final Button day1_button = findViewById(R.id.day1);
-        final Button day2_button = findViewById(R.id.day2);
-        day1_button.setTextColor(getColor(R.color.backGround));
-        day1_button.setBackgroundResource(R.drawable.solid_bottons);
-
-        day1_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                day1_button.setTextColor(getColor(R.color.backGround));
-                day2_button.setTextColor(getColor(R.color.colorPrimary));
-                day1_button.setBackgroundResource(R.drawable.solid_bottons);
-                day2_button.setBackgroundResource(R.drawable.borderd_button);
-
-                listView.setAdapter(adapter1);
-                LayoutAnimationController layoutAnimationController= AnimationUtils.loadLayoutAnimation(AgendaActivity.this,R.anim.layout_slide_from_bottom);
-                listView.setLayoutAnimation(layoutAnimationController);
-
-            }
-        });
-
-// show day2 agenda when 2st day clicked
-
-        day2_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                day1_button.setTextColor(getColor(R.color.colorPrimary));
-                day2_button.setTextColor(getColor(R.color.backGround));
-                day1_button.setBackgroundResource(R.drawable.borderd_button);
-                day2_button.setBackgroundResource(R.drawable.solid_bottons);
-
-                listView.setAdapter(adapter2);
-                LayoutAnimationController layoutAnimationController= AnimationUtils.loadLayoutAnimation(AgendaActivity.this,R.anim.layout_slide_from_bottom);
-                listView.setLayoutAnimation(layoutAnimationController);
-            }
-        });
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                Intent agendaIntent = new Intent(AgendaActivity.this, DescriptionActivity.class);
-
-                if (listView.getAdapter()==adapter1)
-                {
-                   agendaIntent.putExtra("des", Day1.get(position).getDescription());
-                    agendaIntent.putExtra("sp", Day1.get(position).getSpeaker());
-                    agendaIntent.putExtra("img",Day1.get(position).getImage());
-                }
-                else
-                    {
-                    agendaIntent.putExtra("des", Day2.get(position).getDescription());
-                    agendaIntent.putExtra("sp", Day2.get(position).getSpeaker());
-                    agendaIntent.putExtra("img", Day2.get(position).getImage());
-                }
-
-
-
-
-                ImageView image = findViewById(R.id.speaker_img);
-
-                ActivityOptionsCompat activityOp=ActivityOptionsCompat.makeSceneTransitionAnimation(AgendaActivity.this,image,"speaker photo");
-
-
-                startActivity(agendaIntent,activityOp.toBundle());
-
-
-
-            }
-        });
-
 
     }
-    protected void run_animation(ListView view)
-    {
-        Context context=view.getContext();
-
-
-
-    }
-
     @Override
     protected void onPause() {
         super.onPause();
@@ -172,42 +176,6 @@ public class AgendaActivity extends AppCompatActivity {
 
 }
 
-class TalkData {
-    private String time;
-    private String talk;
-    private String speaker;
-    private String description;
-    private int image;
 
-    public TalkData(String time, String talk, String speaker, String description, int image) {
-        this.time = time;
-        this.talk = talk;
-        this.speaker = speaker;
-        this.description = description;
-        this.image = image;
-
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public String getTalk() {
-        return talk;
-    }
-
-    public String getSpeaker() {
-        return speaker;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public int getImage() {
-        return image;
-    }
-
-}
 
 
