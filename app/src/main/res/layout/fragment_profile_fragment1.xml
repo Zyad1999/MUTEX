@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Registration.ProfileFragment1">
+
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Complete Your Profile"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/WhiteColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="To help you connect like minded people"
+        android:textColor="@color/WhiteColor"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivProfilePc"
+        android:layout_width="105dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="139dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="167dp"
+        android:src="@drawable/ic_add_a_photo_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <AutoCompleteTextView
+        android:id="@+id/tvBio"
+        android:layout_width="316dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_rect"
+        android:drawablePadding="10dp"
+        android:hint="Bio"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFEB3B"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWhatsapp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/tvFaculty"
+        android:layout_width="316dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/rounded_rect"
+        android:drawablePadding="10dp"
+        android:hint="Faculty"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFEB3B"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivProfilePc" />
+
+    <AutoCompleteTextView
+        android:id="@+id/tvFacebook"
+        android:layout_width="316dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_rect"
+        android:drawablePadding="10dp"
+        android:hint="Facebook Username"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFEB3B"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFaculty" />
+
+    <AutoCompleteTextView
+        android:id="@+id/tvWhatsapp"
+        android:layout_width="316dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_rect"
+        android:drawablePadding="10dp"
+        android:hint="WhatsApp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFEB3B"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFacebook" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="198dp"
+        android:layout_height="45dp"
+        android:background="@drawable/rounded_button_login"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Next"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBio" />
+</androidx.constraintlayout.widget.ConstraintLayout>

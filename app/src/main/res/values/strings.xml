@@ -13,11 +13,13 @@
     <string name="link_map">http://bit.ly/3bdnR9a</string>
 
 
-
     <string name="send_review">Send review</string>
     <string name="cancel">Cancel</string>
     <string name="later">Later</string>
     <string name="title">App rating</string>
     <string name="description">Please write your feedback</string>
     <string name="defaultComment">This app is pretty cool !</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -2,7 +2,6 @@ package org.ieeezsb;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -16,7 +15,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.fragment.app.FragmentActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -25,6 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.stepstone.apprating.AppRatingDialog;
 import com.stepstone.apprating.listener.RatingDialogListener;
 
+import org.ieeezsb.Registration.LoginActivity;
 import org.ieeezsb.agenda.AgendaActivity;
 import org.ieeezsb.speaker.SpeakersActivity;
 import org.jetbrains.annotations.NotNull;
@@ -48,6 +48,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Toolbar myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
+
+        ConstraintLayout infocons = findViewById(R.id.informationLayout);
+        infocons.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 //        mFaceBook = findViewById(R.id.iv_facebook);
 //        mFaceBook.setOnClickListener(new View.OnClickListener() {
