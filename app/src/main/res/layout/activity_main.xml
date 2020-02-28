@@ -11,54 +11,54 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/ivFacebook"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="70dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintBottom_toTopOf="@+id/tvHashtag"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/sponsorsButton"
         app:srcCompat="@drawable/face" />
 
     <ImageView
-        android:id="@+id/imageView13"
+        android:id="@+id/ivInstagram"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView12"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/ivFacebook"
+        app:layout_constraintBottom_toTopOf="@+id/tvHashtag"
         app:layout_constraintTop_toBottomOf="@+id/sponsorsButton"
         app:srcCompat="@drawable/insta" />
 
     <ImageView
-        android:id="@+id/imageView14"
+        android:id="@+id/ivTwitter"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintStart_toEndOf="@+id/imageView13"
+        app:layout_constraintBottom_toTopOf="@+id/tvHashtag"
+        app:layout_constraintStart_toEndOf="@+id/ivInstagram"
         app:layout_constraintTop_toBottomOf="@+id/button6"
         app:srcCompat="@drawable/twit" />
 
     <ImageView
-        android:id="@+id/imageView15"
+        android:id="@+id/ivLinkedIn"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintBottom_toTopOf="@+id/tvHashtag"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView14"
+        app:layout_constraintStart_toEndOf="@+id/ivTwitter"
         app:layout_constraintTop_toBottomOf="@+id/button6"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/linked" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tvHashtag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="#MutexSummit"
@@ -67,7 +67,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+        app:layout_constraintTop_toBottomOf="@+id/ivLinkedIn" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
