@@ -1,9 +1,12 @@
 package org.ieeezsb;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -60,61 +63,66 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
 
-//        mFaceBook = findViewById(R.id.iv_facebook);
-//        mFaceBook.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
-//                intent.putExtra("url", "https://www.facebook.com/MUTEX.Summit/?ref=gs&__tn__=%2CdK-R-R&eid=ARB9kh2MDdy_d3BcBdys0bTW9UWQaE9J0_8ouhQgpIB8yy37ppKWYq6-6auxFS8_UJTgMzk5Trr-4SFa&fref=gs&dti=181743375206602&hc_location=group");
-//                if (!haveConnectionToInternet()) {
-//                    noInternetToast();
-//                } else {
-//                    startActivity(intent);
-//                }
-//            }
-//        });
-//
-//        mTwitter = findViewById(R.id.twitter);
-//        mTwitter.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
-//                intent.putExtra("url", "https://twitter.com/MutexSummit?fbclid=IwAR3P32TEqe5el4jKbs2GDffXC0W9QRXL_mL8vZWsrN0Pyi-3GeazAy76xic");
-//                if (!haveConnectionToInternet()) {
-//                    noInternetToast();
-//                } else {
-//                    startActivity(intent);
-//                }
-//            }
-//        });
-//
-//
-//        mLinkdin = findViewById(R.id.linkd);
-//        mLinkdin.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
-//                intent.putExtra("url", "https://www.linkedin.com/company/mutexsummit/?fbclid=IwAR0YW9zONy1-hUW2hyHNF2cTDQXbK5C2tvqB5XgjQp6KaZ7HHVKts4Rd5EQ");
-//                if (!haveConnectionToInternet()) {
-//                    noInternetToast();
-//                } else {
-//                    startActivity(intent);
-//                }
-//            }
-//        });
-//        mInsta = findViewById(R.id.iv_instagram);
-//        mInsta.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
-//                intent.putExtra("url", "https://www.instagram.com/mutex.summit/?fbclid=IwAR1GA6wU9s4uS_vIFrVSs2wqFKBcRIDOwnBMNwfKIvJCnQsxBdGwoSrSunc");
-//                if (!haveConnectionToInternet()) {
-//                    noInternetToast();
-//                } else {
-//                    startActivity(intent);
-//                }
-//            }
-//        });
+        mFaceBook = findViewById(R.id.imageView12);
+        mFaceBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =getOpenFacebookIntent(MainActivity.this);
+                if (!haveConnectionToInternet()) {
+                    noInternetToast();
+                } else {
+                    startActivity(intent);
+                }
+            }
+        });
+
+        mTwitter = findViewById(R.id.imageView14);
+        mTwitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =openTwitterHandle(MainActivity.this);
+                if (!haveConnectionToInternet()) {
+                    noInternetToast();
+                } else {
+                    startActivity(intent);
+                }
+            }
+        });
+
+        mLinkdin = findViewById(R.id.imageView15);
+        mLinkdin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =openLinked(MainActivity.this);
+                if (!haveConnectionToInternet()) {
+                    noInternetToast();
+                } else {
+                    startActivity(intent);
+                }
+            }
+        });
+
+        mInsta = findViewById(R.id.imageView13);
+        mInsta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse("https://www.instagram.com/mutex.summit/?fbclid=IwAR1GA6wU9s4uS_vIFrVSs2wqFKBcRIDOwnBMNwfKIvJCnQsxBdGwoSrSunc");
+                Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
+
+                likeIng.setPackage("com.instagram.android");
+
+                try {
+                    startActivity(likeIng);
+                } catch (ActivityNotFoundException e) {
+                    startActivity(new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("https://www.instagram.com/mutex.summit/?fbclid=IwAR1GA6wU9s4uS_vIFrVSs2wqFKBcRIDOwnBMNwfKIvJCnQsxBdGwoSrSunc")));
+                }
+                if (!haveConnectionToInternet()) {
+                    noInternetToast();
+                    startActivity(likeIng);
+                }
+            }
+        });
 //        hashtag = findViewById(R.id.tvhashtag);
 //        hashtag.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -291,4 +299,60 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return "Rate" + time;
     }
 
+    public static String FACEBOOK_URL = "https://www.facebook.com/MUTEX.Summit/?ref=gs&__tn__=%2CdK-R-R&eid=ARB9kh2MDdy_d3BcBdys0bTW9UWQaE9J0_8ouhQgpIB8yy37ppKWYq6-6auxFS8_UJTgMzk5Trr-4SFa&fref=gs&dti=181743375206602&hc_location=group";
+    public static String FACEBOOK_PAGE_ID = "369359436859051";
+
+    private static String getFacebookPageURL(Context context) {
+        PackageManager packageManager = context.getPackageManager();
+        try {
+            int versionCode = packageManager.getPackageInfo("com.facebook.katana", 0).versionCode;
+            if (versionCode >= 3002850) { //newer versions of fb app
+                return "fb://facewebmodal/f?href=" + FACEBOOK_URL;
+            } else { //older versions of fb app
+                return "fb://page/" + FACEBOOK_PAGE_ID;
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            return FACEBOOK_URL; //normal web url
+        }
+    }
+    public static Intent getOpenFacebookIntent(Context context) {
+        Intent intent = null;
+        String fbURL = getFacebookPageURL(context);
+        Uri.parse(fbURL);
+        try {
+            context.getPackageManager()
+                    .getPackageInfo("com.facebook.katana", 0);
+            return new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("getFacebookPageURL"));
+        } catch (Exception e) {
+            return new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("https://www.facebook.com/MUTEX.Summit/?ref=gs&__tn__=%2CdK-R-R&eid=ARB9kh2MDdy_d3BcBdys0bTW9UWQaE9J0_8ouhQgpIB8yy37ppKWYq6-6auxFS8_UJTgMzk5Trr-4SFa&fref=gs&dti=181743375206602&hc_location=group"));
+        }}
+
+
+
+    public static Intent openTwitterHandle(Context context) {
+        Intent intent = null;
+        try {
+            context.getPackageManager().getPackageInfo("com.twitter.android", 0);
+            new Intent(Intent.ACTION_VIEW, Uri.parse("twitter://user?user_id=id_num" ));
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        }
+        catch (Exception e) {
+            intent = new Intent(Intent.ACTION_VIEW, Uri.parse( "https://twitter.com/MutexSummit?fbclid=IwAR3P32TEqe5el4jKbs2GDffXC0W9QRXL_mL8vZWsrN0Pyi-3GeazAy76xic"));
+        }
+        return intent;
+    }
+
+    public static Intent openLinked(Context context) {
+        try {
+            context.getPackageManager().getPackageInfo("com.linkedin.android", 0);
+            return new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.linkedin.com/company/mutexsummit/?fbclid=IwAR0YW9zONy1-hUW2hyHNF2cTDQXbK5C2tvqB5XgjQp6KaZ7HHVKts4Rd5EQ"));
+        } catch (Exception e) {
+            return new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("https://www.linkedin.com/company/mutexsummit/?fbclid=IwAR0YW9zONy1-hUW2hyHNF2cTDQXbK5C2tvqB5XgjQp6KaZ7HHVKts4Rd5EQ"));
+        }}
+
+
 }
+
