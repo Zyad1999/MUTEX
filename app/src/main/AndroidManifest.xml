@@ -12,8 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".Registration.RegisterActivity" android:theme="@style/HomeTheme"></activity>
-        <activity android:name=".Registration.LoginActivity" android:theme="@style/HomeTheme"/>
+        <activity android:name=".recommended.RecommendActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/HomeTheme"></activity>
+        <activity
+            android:name=".Registration.RegisterActivity"
+            android:theme="@style/HomeTheme" />
+        <activity
+            android:name=".Registration.LoginActivity"
+            android:theme="@style/HomeTheme" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashTheme">

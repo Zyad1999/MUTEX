@@ -26,6 +26,7 @@ import com.stepstone.apprating.listener.RatingDialogListener;
 
 import org.ieeezsb.Registration.LoginActivity;
 import org.ieeezsb.agenda.AgendaActivity;
+import org.ieeezsb.recommended.RecommendActivity;
 import org.ieeezsb.speaker.SpeakersActivity;
 import org.jetbrains.annotations.NotNull;
 

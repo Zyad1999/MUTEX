@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:elevation="4dp">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/cir_img"
+        android:layout_margin="4dp"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+    />
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_toRightOf="@id/cir_img"
+        android:layout_margin="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ahmed Mohamed"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginLeft="4dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_faculty"
+        android:layout_toRightOf="@id/cir_img"
+        android:layout_marginLeft="4dp"
+        android:text="Faculty of Engineering"
+        android:layout_below="@id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        />
+</RelativeLayout>
