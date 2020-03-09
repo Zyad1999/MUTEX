@@ -23,6 +23,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.stepstone.apprating.AppRatingDialog;
@@ -83,7 +85,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.informationLayout:
-                intetentController(MainActivity.this, LoginActivity.class);
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                if (user != null) {
+                    // User is signed in
+                    intetentController(MainActivity.this, RecommendActivity.class);
+                } else {
+                    // No user is signed in
+                    intetentController(MainActivity.this, LoginActivity.class);
+                }
                 break;
             case R.id.sponsorsButton:
                 intetentController(MainActivity.this, Partners.class);

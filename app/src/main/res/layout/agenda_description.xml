@@ -4,35 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:background="@color/backGround">
+    android:gravity="center_horizontal">
+
    <com.mikhaellopez.circularimageview.CircularImageView
        android:id="@+id/des_img"
        android:layout_width="250dp"
        android:layout_height="250dp"
-       android:src="@drawable/ibm"
        android:background="@color/backGround"
+       android:src="@drawable/ibm"
+       android:transitionName="speaker photo"
        app:civ_border_color="@color/colorPrimary"
        app:civ_border_width="10dp"
        app:civ_shadow="true"
        app:civ_shadow_color="@color/colorPrimary"
-       app:civ_shadow_radius="10"
-       android:transitionName="speaker photo"
-       />
+       app:civ_shadow_radius="10" />
 
    <LinearLayout
-       android:background="@color/backGround"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:orientation="vertical"
        android:layout_gravity="center_horizontal">
 
       <TextView
-          android:id="@+id/speaker_name"
+          android:id="@+id/user_name"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_gravity="center_horizontal"
-          android:background="@color/backGround"
           android:text="Speaker"
           android:textColor="@color/colorPrimary"
           android:textSize="25dp"
@@ -44,7 +41,6 @@
           android:layout_height="wrap_content"
           android:layout_gravity="center_horizontal"
           android:layout_margin="12dp"
-          android:background="@color/backGround"
           android:text="bla bla bla"
           android:textSize="17dp" />
 

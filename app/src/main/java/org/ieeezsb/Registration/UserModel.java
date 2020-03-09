@@ -139,11 +139,11 @@ public class UserModel {
         this.skills = skills;
     }
 
-    public void addInterest(String h){
+    public void addInterest(String h) {
         this.interests.add(h);
     }
 
-    public void addSkill(String s){
+    public void addSkill(String s) {
         this.skills.add(s);
     }
 }

@@ -41,7 +41,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:background="@color/backGround"
         android:divider="@null"
         android:dividerHeight="8dp"
         android:layoutAnimation="@anim/layout_slide_from_bottom"

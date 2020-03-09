@@ -26,14 +26,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recommended,parent,false);
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.recommended, parent, false);
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         UserModel model = modelList.get(position);
-        holder.txtName.setText(model.getfName()+" "+model.getlName());
+        holder.txtName.setText(model.getfName() + " " + model.getlName());
         holder.txtFaculty.setText(model.getBio());
         Picasso.get().load(model.getProfilePicLink()).into(holder.img);
     }
@@ -44,13 +45,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView txtName , txtFaculty ;
+        public TextView txtName, txtFaculty;
         public CircularImageView img;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             txtName = itemView.findViewById(R.id.txt_name);
             txtFaculty = itemView.findViewById(R.id.txt_faculty);
             img = itemView.findViewById(R.id.cir_img);
-            }
+        }
     }
 }

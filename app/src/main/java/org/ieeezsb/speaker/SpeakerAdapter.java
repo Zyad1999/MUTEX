@@ -133,9 +133,9 @@ public class SpeakerAdapter extends RecyclerView.Adapter<SpeakerAdapter.ViewHold
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            speakerImage = itemView.findViewById(R.id.speaker_image);
-            speakerName = itemView.findViewById(R.id.speaker_name);
-            speakerDescription = itemView.findViewById(R.id.speaker_description);
+            speakerImage = itemView.findViewById(R.id.user_image);
+            speakerName = itemView.findViewById(R.id.user_name);
+            speakerDescription = itemView.findViewById(R.id.user_description);
             social1 = itemView.findViewById(R.id.social_media_1);
             social2 = itemView.findViewById(R.id.social_media_2);
             social3 = itemView.findViewById(R.id.social_media_3);
