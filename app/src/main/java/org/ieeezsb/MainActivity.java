@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.sponsorsButton:
-                intetentController(MainActivity.this, Partners.class);
+                intetentController(MainActivity.this, ProfileActivity.class);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 break;
             case R.id.speakers_button:

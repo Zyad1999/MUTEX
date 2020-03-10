@@ -12,11 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".recommended.AtendeesDetailsActivity"></activity>
-        <activity
-            android:name=".recommended.RecommendActivity"
+        <activity android:name=".recommended.RecommendActivity"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/HomeTheme" />
+            android:theme="@style/HomeTheme"></activity>
         <activity
             android:name=".Registration.RegisterActivity"
             android:theme="@style/HomeTheme" />
