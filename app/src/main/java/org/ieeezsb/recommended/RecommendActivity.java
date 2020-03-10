@@ -126,7 +126,7 @@ public class RecommendActivity extends AppCompatActivity {
 
     private void initAttendanceRecyclerView() {
         recyclerView = findViewById(R.id.recycler_view);
-        adapter = new Adapter(modelList);
+        adapter = new Adapter(modelList , RecommendActivity.this);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());

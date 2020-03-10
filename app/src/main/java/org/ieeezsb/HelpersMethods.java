@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 
+import org.ieeezsb.recommended.AtendeesDetailsActivity;
+
 public final class HelpersMethods {
     private static String getFacebookPageURL(Context context) {
         PackageManager packageManager = context.getPackageManager();

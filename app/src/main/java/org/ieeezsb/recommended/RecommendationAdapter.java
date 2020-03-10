@@ -1,6 +1,7 @@
 package org.ieeezsb.recommended;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
@@ -47,7 +49,6 @@ public class RecommendationAdapter extends RecyclerView.Adapter<RecommendationAd
         holder.userName.setText(currentUser.getfName() + " " + currentUser.getlName());
         holder.userDescription.setText(currentUser.getBio());
         Picasso.get().load(currentUser.getProfilePicLink()).into(holder.userImage);
-
     }
 
 
@@ -62,16 +63,11 @@ public class RecommendationAdapter extends RecyclerView.Adapter<RecommendationAd
         TextView userName, userDescription;
         ImageView userImage;
 
-
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-
             userImage = itemView.findViewById(R.id.user_image);
             userName = itemView.findViewById(R.id.user_name);
             userDescription = itemView.findViewById(R.id.user_description);
-
-
-
         }
     }
 
