@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_img"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars[0]" />
+
+            <TextView
+                android:id="@+id/shortenName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="cursive"
+                android:textColor="@color/WhiteColor"
+                android:textSize="120sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/profile_img"
+                app:layout_constraintEnd_toEndOf="@+id/profile_img"
+                app:layout_constraintStart_toStartOf="@+id/profile_img"
+                app:layout_constraintTop_toTopOf="@+id/profile_img"
+                tools:text="UN" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/change_imageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@+id/profile_img"
+                app:layout_constraintEnd_toEndOf="@+id/profile_img" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_menu_camera"
+                app:layout_constraintBottom_toBottomOf="@+id/change_imageView"
+                app:layout_constraintEnd_toEndOf="@+id/change_imageView"
+                app:layout_constraintStart_toStartOf="@+id/change_imageView"
+                app:layout_constraintTop_toTopOf="@+id/change_imageView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/conImage"
+            app:layout_constraintVertical_bias="0.19">
+
+
+            <AutoCompleteTextView
+                android:id="@+id/tvFName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_rect"
+                android:drawableStart="@drawable/icon_person"
+                android:drawableLeft="@drawable/icon_person"
+                android:drawablePadding="10dp"
+                android:hint="First Name"
+                android:inputType="textPersonName"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFEB3B"
+                android:textSize="15sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/tvLName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_rect"
+                android:drawableStart="@drawable/icon_person"
+                android:drawableLeft="@drawable/icon_person"
+                android:drawablePadding="10dp"
+                android:hint="Last Name"
+                android:inputType="textPersonName"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFEB3B"
+                android:textSize="15sp" />
+
+
+            <AutoCompleteTextView
+                android:id="@+id/tvUsername"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_rect"
+                android:drawableStart="@drawable/icon_person"
+                android:drawableLeft="@drawable/icon_person"
+                android:drawablePadding="10dp"
+                android:hint="Username"
+                android:inputType="textPersonName"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFEB3B"
+                android:textSize="15sp" />
+
+
+
+
+            <AutoCompleteTextView
+                android:id="@+id/tvFaculty"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_rect"
+                android:drawableStart="@drawable/ic_account_balance"
+                android:drawablePadding="10dp"
+                android:hint="Faculty"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFEB3B"
+                android:textSize="15sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/tvWhatsapp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_rect"
+                android:drawableStart="@drawable/ic_phone_android"
+                android:drawablePadding="10dp"
+                android:hint="WhatsApp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFEB3B"
+                android:textSize="15sp" />
+
+
+            <AutoCompleteTextView
+                android:id="@+id/tvFacebook"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_rect"
+                android:drawableStart="@drawable/facebook_icon_hh"
+                android:drawablePadding="10dp"
+                android:hint="Facebook Username"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFEB3B"
+                android:textSize="15sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/tvBio"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_rect"
+                android:drawablePadding="10dp"
+                android:hint="Bio"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFEB3B"
+                android:textSize="15sp" />
+
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rounded_button_login"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Save"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
